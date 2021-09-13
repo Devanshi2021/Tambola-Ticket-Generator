@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llThankYou"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="vertical"
+>
+
+    <ImageView
+        android:layout_width="@dimen/dimen_200"
+        android:layout_height="@dimen/dimen_200"
+        android:padding="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:background="@drawable/ic_congratulations"/>
+
+    <TextView
+        android:id="@+id/tvThankYouTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center_horizontal"
+        android:text="Thank You !"
+        android:textColor="@color/colorGreen"
+        android:textSize="@dimen/font_20"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvThankYouDescription"
+        android:layout_width="@dimen/dimen_250"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/lbl_thank_you_description"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/font_14"
+    />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnClose"
+        style="@style/StyleTextView"
+        android:layout_width="@dimen/dimen_250"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:gravity="center"
+        android:padding="@dimen/dimen_5"
+        android:text="@string/lbl_dialog_close"/>
+</LinearLayout>

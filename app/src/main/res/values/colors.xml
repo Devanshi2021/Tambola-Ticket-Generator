@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EA9800</color>
+    <color name="colorPrimaryDark">#E1611A</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+
+    <color name="colorOrangeLight">@color/colorPrimary</color>
+    <color name="colorBgHome">#F1F1F1</color>
+    <color name="colorBgHomeBanner">#858b94</color>
+    <color name="colorBgHomeDeals">#F9F9F9</color>
+    <color name="colorSemiTransparent">#80000000</color>
+
+    <color name="colorGrayBorder">#FBFBFB</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorOffWhite">#F2F2F2</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorFontDarkGray">#333333</color>
+    <color name="colorFontLightGray">#666666</color>
+    <color name="colorTextFiledLabel">#bdbdbd</color>
+    <color name="colorDivider">#F1F1F1</color>
+    <color name="colorRed">#F0453F</color>
+    <color name="colorGreen">#FF669900</color>
+    <color name="colorBgDialog">#77000000</color>
+
+    <color name="colorGreenLight">#8ab42f</color>
+
+    <color name="colorOffWhite_trans">#CDFFFFFF</color>
+
+    <color name="shadow_start">#20000000</color>
+    <color name="shadow_end">#00000000</color>
+
+    <color name="product_attribute_border">#F0F0F0</color>
+
+    <color name="color_header_shadow">#E2E2E2</color>
+    <color name="LightOrange">#FFE077</color>
+
+</resources>

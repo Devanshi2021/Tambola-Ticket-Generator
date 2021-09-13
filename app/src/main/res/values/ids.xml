@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="sectioning_adapter_tag_key_view_viewholder" type="id" />
+    <item name="header_ib_search" type="id" />
+    <!---->
+    <item name="tag_type_view" type="id" />
+    <item name="tag_row" type="id" />
+    <item name="tag_column" type="id" />
+</resources>
+

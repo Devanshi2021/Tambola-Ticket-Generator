@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_empty_view_ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/layout_empty_view_tv_message"
+        android:layout_margin="@dimen/dimen_15"
+        android:text="@string/message_no_data_available"
+        style="@style/StyleTextView"
+        />
+
+</LinearLayout>

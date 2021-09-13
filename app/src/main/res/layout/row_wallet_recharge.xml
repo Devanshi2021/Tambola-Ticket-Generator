@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_7sdp"
+    android:layout_marginEnd="@dimen/_7sdp"
+    android:background="@android:color/white"
+    android:gravity="start|center"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ticketDetailCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/cvCardView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPlayerName"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:gravity="start|center"
+                android:maxLines="2"
+                android:text="@string/str_player_id"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAmount"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvPlayerName"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start"
+                android:maxLines="2"
+                android:text="@string/str_amount"
+                android:textColor="@color/colorBlack" />
+
+            <LinearLayout
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAmount"
+                >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start"
+                android:text="@string/description"
+                android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescriptionValue"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="3"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/colorBlack" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvType"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvDescription"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start"
+                android:maxLines="2"
+                android:text="@string/type"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRechargedBy"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvType"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/recharged_by_wallet"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCreatedAt"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvRechargedBy"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start"
+                android:maxLines="2"
+                android:text="@string/recharged_at"
+                android:textColor="@color/colorBlack" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

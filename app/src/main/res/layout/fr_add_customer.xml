@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_registration_ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header_add_player"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_100"
+                android:layout_height="@dimen/dimen_100"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_profile" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    style="@style/etFormEditText"
+                    android:hint="@string/lbl_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLength="50"
+                    android:nextFocusForward="@+id/etMobile" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--<com.lessohome.customview.CustomFontTextView
+                style="@style/tvFormLable"
+                android:text="@string/lbl_last_name" />-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMobile"
+                    style="@style/etFormEditText"
+                    android:hint="@string/lbl_mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:nextFocusForward="@+id/etFullName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etFullName"
+                    style="@style/etFormEditText"
+                    android:hint="@string/full_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:visibility="gone"
+                    android:nextFocusForward="@+id/tvCity" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<com.lessohome.customview.CustomFontTextView
+                style="@style/tvFormLable"
+                android:text="@string/lbl_email_address" />-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCity"
+                style="@style/etFormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="City"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="10">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/textInputLayoutForm"
+                    android:layout_width="0dp"
+                    android:layout_weight="3.5"
+                    app:hintTextAppearance="@style/flotingLabelStyle">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/ettelephone_country_code"
+                        style="@style/etFormEditText"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:focusable="false"
+                        android:hint="@string/lbl_telephone"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/textInputLayoutForm"
+                    android:layout_width="0dp"
+                    android:layout_weight="6.5"
+                    app:hintTextAppearance="@style/flotingLabelStyle">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/ettelephone_number"
+                        style="@style/etFormEditText"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="15"
+                        android:nextFocusForward="@+id/etpassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/bvSignIn"
+                android:text="@string/addPlayer"
+                 />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_registration_ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header_login"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketSerial"
+                style="@style/etFormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="Ticket Serial Title"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketColumn"
+                style="@style/etFormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="Ticket Column Title"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etFromSerialNumber"
+                    style="@style/etFormEditText"
+                    android:hint="From Serial Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:nextFocusForward="@+id/etToSerialNumber" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etToSerialNumber"
+                    style="@style/etFormEditText"
+                    android:hint="To Serial Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketStatus"
+                style="@style/etFormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="Ticket Status"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etID"
+                    style="@style/etFormEditText"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20">
+                <ImageView
+                    style="@style/etFormEditText"
+                    android:layout_width="@dimen/_210sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:id="@+id/imageView"
+                    android:layout_marginEnd="@dimen/dimen_5"
+                    android:contentDescription="@null"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSelectImage"
+                style="@style/bvSelectImage"
+                android:text="Select\nImage" />
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/bvSignIn"
+                android:text="@string/addTicket" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

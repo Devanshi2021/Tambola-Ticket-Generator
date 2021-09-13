@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_7sdp"
+    android:layout_marginEnd="@dimen/_7sdp"
+    android:background="@android:color/white"
+    android:gravity="start|center"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/_5sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ticketDetailCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/cvCardView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvId"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:gravity="start|center"
+                android:maxLines="2"
+                android:text="@string/str_id"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPlayerName"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvId"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start|center"
+                android:maxLines="2"
+                android:text="@string/str_player_id"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketColumnTitle"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvPlayerName"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start|center"
+                android:maxLines="2"
+                android:text="@string/str_column_title"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCreatedByName"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvTicketColumnTitle"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start|center"
+                android:maxLines="2"
+                android:text="@string/str_created_by_id"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAmount"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvCreatedByName"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:text="@string/str_amount"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTransactionId"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvAmount"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:text="@string/str_transaction_id"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGameOn"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvTransactionId"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:text="@string/str_game_on"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPayedBy"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvGameOn"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:text="@string/str_paid_by"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAlphabetSerialIndex"
+                style="@style/StyleTextView"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvPayedBy"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:text="@string/str_alphabet_serial_index"
+                android:textColor="@color/colorBlack" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ticketDetailCl"
+        app:layout_constraintTop_toTopOf="@+id/ticketDetailCl" />
+
+    <TextView
+        android:id="@+id/tvUpdate"
+        style="@style/bvUpdate"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="Update"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ticketDetailCl"
+        app:layout_constraintTop_toBottomOf="@+id/ticketDetailCl" />
+
+    <TextView
+        android:id="@+id/tvDelete"
+        style="@style/bvUpdate"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="Delete"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/tvShare"
+        app:layout_constraintTop_toBottomOf="@+id/ticketDetailCl"
+        app:layout_constraintStart_toEndOf="@+id/tvUpdate" />
+
+    <TextView
+        android:id="@+id/tvDownload"
+        style="@style/bvUpdate"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="Download"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/ticketDetailCl"
+        app:layout_constraintStart_toEndOf="@+id/tvDelete" />
+
+    <TextView
+        android:id="@+id/tvShare"
+        style="@style/bvUpdate"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="Share"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ticketDetailCl"
+        app:layout_constraintStart_toEndOf="@+id/tvDownload" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCardView"
+        style="@style/cvCardView"
+        android:layout_width="@dimen/dimen_90"
+        android:layout_height="@dimen/dimen_90"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/bg_clothes" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

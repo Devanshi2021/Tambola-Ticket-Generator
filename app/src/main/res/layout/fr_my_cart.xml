@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_login"
+        android:id="@+id/llHeader"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_below="@+id/llHeader"
+        android:id="@+id/llCustomer"
+
+        android:background="@color/colorOffWhite"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCustomer"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        style="@style/StyleTextView"
+        android:background="@color/colorWhite"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:padding="@dimen/dimen_16"
+        android:text="Customer name"
+        android:layout_marginEnd="@dimen/dimen_5"
+        android:gravity="start|center"
+        />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAddCustomer"
+            style="@style/IVHeader"
+            android:contentDescription="@null"
+            android:background="@color/colorWhite"
+            android:src="@drawable/ic_add_orange" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlCustomerView"
+        android:visibility="visible"
+        android:paddingTop="@dimen/dimen_10"
+        android:layout_below="@+id/llCustomer"
+        android:paddingBottom="@dimen/dimen_10"
+        android:background="@color/colorDivider"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:id="@+id/llSearchCustomer"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextCustomerNumber"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_height="wrap_content"
+                android:hint="Find Customer"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_15"
+                android:layout_weight="9"
+                style="@style/StyleEditText" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearSearch"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/dimen_14"
+                android:src="@drawable/ic_clear_black_24dp"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llSearchCustomer"
+            android:background="@color/colorDivider" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlCartView"
+        android:paddingTop="@dimen/dimen_10"
+        android:visibility="gone"
+        android:layout_below="@+id/llCustomer"
+        android:paddingBottom="@dimen/dimen_10"
+        android:background="@color/colorDivider"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottom"
+            android:background="@color/colorDivider" />
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="right"
+                android:id="@+id/lldiscount"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="right"
+                    android:text="Discount : "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_18"/>
+                <EditText
+                    android:id="@+id/editTextDiscount"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:gravity="right"
+                    tools:text="200"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:maxWidth="@dimen/_45sdp"
+                    android:textColor="@color/colorBlack"/>
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorFontLightGray" />
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="right"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="right"
+                tools:text="Total : 200"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_18"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bv_apply"
+                android:text="@string/lbl_submit"
+
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font_15"
+               style="@style/StyleTextView" />
+
+        </LinearLayout>
+        <include
+            layout="@layout/layout_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+
+        <include layout="@layout/layout_empty_text_view"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>

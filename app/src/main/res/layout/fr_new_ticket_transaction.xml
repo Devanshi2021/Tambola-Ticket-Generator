@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_registration_ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header_add_player"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/cartView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tvTicketPlayer"
+                    style="@style/etFormEditText"
+                    android:hint="Player Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketSerial"
+                style="@style/etFormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="Ticket Serial Title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketColumn"
+                style="@style/etFormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="Ticket Column Title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketId"
+                style="@style/etFormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="Ticket Id" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAmount"
+                    style="@style/etFormEditText"
+                    android:hint="Amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etTransactionID"
+                    style="@style/etFormEditText"
+                    android:hint="Transaction ID"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:textAlignment="center"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Game ON"
+                android:layout_marginStart="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="02:30 PM"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvTime1"
+                    app:layout_constraintTop_toTopOf="@+id/tvTime1"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="03:00 PM"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvTime2"
+                    app:layout_constraintTop_toTopOf="@+id/tvTime2"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="03:30 PM"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvTime3"
+                    app:layout_constraintTop_toTopOf="@+id/tvTime3"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="05:00 PM"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTime1"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="05:30 PM"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvTime5"
+                    app:layout_constraintTop_toTopOf="@+id/tvTime5"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="09:30 PM"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvTime6"
+                    app:layout_constraintTop_toTopOf="@+id/tvTime6"
+                    android:padding="@dimen/dimen_6"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="10:00 PM"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvTime7"
+                    app:layout_constraintTop_toTopOf="@+id/tvTime7"
+                    android:padding="@dimen/dimen_6"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="10:30 PM"
+                    android:textColor="@color/colorBlack" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:textAlignment="center"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Paid By"
+                android:layout_marginStart="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="Google Pay"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPaytm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvGpay"
+                    app:layout_constraintTop_toTopOf="@+id/tvGpay"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="Paytm"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUPI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvPaytm"
+                    app:layout_constraintTop_toTopOf="@+id/tvPaytm"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="UPI"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    app:layout_constraintStart_toEndOf="@+id/tvUPI"
+                    app:layout_constraintTop_toTopOf="@+id/tvUPI"
+                    android:padding="@dimen/dimen_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/roundedcorner_gray"
+                    android:text="Others"
+                    android:textColor="@color/colorBlack" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etID"
+                    style="@style/etFormEditText"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/bvSignIn"
+                android:text="Submit Transaction" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

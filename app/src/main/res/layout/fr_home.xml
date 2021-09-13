@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_home" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddPlayer"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_13sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bv_apply"
+        android:text="@string/addPlayer"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        style="@style/HomeStyleTextView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddTicketTransaction"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_13sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bv_apply"
+        android:text="@string/lbl_newTicketTransaction"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        style="@style/HomeStyleTextView" />
+
+
+</LinearLayout>

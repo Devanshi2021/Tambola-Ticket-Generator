@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_registration_ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header_add_player"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/cartView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutForm"
+                app:hintTextAppearance="@style/flotingLabelStyle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tvGameId"
+                    style="@style/etFormEditText"
+                    android:enabled="false"
+                    android:hint="Game Id"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <GridView
+                android:id="@+id/llClaimType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:numColumns="4"
+                android:padding="12dp"
+                tools:listitem="@layout/claim_request_gridview_items"
+                android:scrollbars="vertical"
+                android:nestedScrollingEnabled="true"
+                android:horizontalSpacing="@dimen/_12sdp"
+                android:verticalSpacing="@dimen/_7sdp"
+                android:listSelector="@drawable/rounded_text"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTransactionId"
+                style="@style/etFormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="Transaction Id" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/colorGrayBorder" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/bvSignIn"
+                android:text="Submit Claim" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_home" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:id="@+id/llSearch"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/editTextCustomerNumber"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_13sdp"
+        android:layout_height="wrap_content"
+        android:hint="Find by Player name / Transaction Id"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/font_15"
+        android:layout_weight="9"
+        style="@style/StyleEditText" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearSearch"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/dimen_14"
+            android:src="@drawable/ic_clear_black_24dp"/>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddTicketTransaction"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_13sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bv_apply"
+        android:text="@string/newTicketTransaction"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_15"
+        style="@style/StyleTextView" />
+</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_10"
+        android:background="@color/colorDivider"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewTicket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorDivider" />
+
+        <include
+            layout="@layout/layout_progress" />
+
+        <include layout="@layout/layout_empty_text_view"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

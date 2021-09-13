@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.shreenology.tambola.ticketgenerator.app",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 1,
+      "versionName": "1.7",
+      "enabled": true,
+      "outputFile": "Tambola_Ticket_Generator_version_1_name_1.7-release.apk"
+    }
+  ]
+}

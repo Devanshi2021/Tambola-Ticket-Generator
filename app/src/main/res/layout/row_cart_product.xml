@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_7sdp"
+    android:layout_marginEnd="@dimen/_7sdp"
+    android:background="@android:color/white"
+    android:gravity="start|center"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/_5sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/ticketDetailCl"
+        android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvId"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:gravity="start|center"
+                    android:maxLines="2"
+                    android:text="@string/str_id"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSerialIndexId"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tvId"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="start|center"
+                    android:maxLines="2"
+                    android:text="@string/str_serial_id"
+                    android:visibility="gone"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFromSerialNo"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tvSerialIndexId"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="start|center"
+                    android:maxLines="2"
+                    android:text="@string/str_from_serial"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvToSerialNo"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tvFromSerialNo"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="start|center"
+                    android:maxLines="2"
+                    android:text="@string/str_to_serial"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvColumnId"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tvToSerialNo"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="start|center"
+                    android:maxLines="2"
+                    android:text="@string/str_column_id"
+                    android:visibility="gone"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAlphabetSerialIndex"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tvColumnId"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:text="@string/str_alphabet_serial_index"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTicketColumnTitle"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tvAlphabetSerialIndex"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:text="@string/str_ticket_title"
+                    android:textColor="@color/colorBlack" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@+id/left"
+                app:layout_constraintStart_toEndOf="@+id/left"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUpdateAt"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:text="@string/str_update_at"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCreatedAt"
+                    style="@style/StyleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tvUpdateAt"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:text="@string/str_created_at"
+                    android:textColor="@color/colorBlack" />
+            </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/ivImage"
+        app:layout_constraintStart_toEndOf="@+id/ticketDetailCl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:contentDescription="@null"/>
+
+    <TextView
+        android:id="@+id/tvUpdate"
+        style="@style/bvUpdate"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="Update"
+        app:layout_constraintStart_toStartOf="@+id/ticketDetailCl"
+        app:layout_constraintTop_toBottomOf="@+id/ticketDetailCl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvDelete"
+        style="@style/bvUpdate"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="Delete"
+        app:layout_constraintStart_toEndOf="@+id/tvUpdate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- String for font -->
+    <string name="fcm_token">fcm_token</string>
+
+
+
+    <string name="usertype_customer">customer</string>
+    <string name="usertype_osp">osp</string>
+    <string name="sku">SKU: %1$s</string>
+    <string name="increment_id">#%s</string>
+
+    <string name="file_extension_jpg">.jpg</string>
+    <string name="formatted_html"><![CDATA["<html><head><style type="text/css">@font-face {font-family: Muli;src: url("file:///android_asset/Fonts/Muli-Regular.ttf")}body {font-family: Muli;font-size: 14px;line-height: 180%;}</style></head><body>"]]></string>
+
+    <string name="link_terms_and_condition">http://www.lessohome.com/terms-of-use/</string>
+
+    <string-array name="allowed_file_format">
+        <item>jpg</item>
+        <item>png</item>
+        <item>jpeg</item>
+    </string-array>
+
+
+    <string-array name="sourcing_request_lable">
+        <item>Under Review</item>
+        <item>Contacted</item>
+        <item>Fulfilled</item>
+        <item>Cancelled</item>
+    </string-array>
+
+    <string-array name="sourcing_request_key">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+
+    <string-array name="order_status_lable">
+        <item>Placed</item>
+        <item>Service Charge Submitted</item>
+        <item>Confirmed</item>
+        <item>Shipped</item>
+        <item>Arrived at destination</item>
+        <item>Collected</item>
+    </string-array>
+
+    <string-array name="order_status_key">
+        <item>order_placed</item>
+        <item>service_charges_submitted</item>
+        <item>order_confirmed</item>
+        <item>shipped</item>
+        <item>arrived_at_destination</item>
+        <item>order_collected</item>
+    </string-array>
+
+
+    <!--supplier-->
+
+    <string-array name="supplier_manager_lable">
+        <item>My Suppliers</item>
+        <item>My Team</item>
+    </string-array>
+
+</resources>
